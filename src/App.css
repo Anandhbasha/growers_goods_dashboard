@@ -7,7 +7,7 @@
 }
 .sidebar{
   width: 13%;
-  height: 100%;
+  height: inherit;
   background-color: #191D23;
 }
 .Topbar{

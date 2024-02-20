@@ -10,6 +10,7 @@ import Famers from "./Pages/Farmers/Famers";
 import Fertilizer from "./Pages/Fertilizer/Fertilizer";
 import Veggies from "./Pages/Veggies/Veggies";
 import Seeds from "./Pages/Seeds/Seeds";
+import User from "./Pages/Users/User";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
             <Route path="/Fertilizer" element={<Fertilizer />} />
             <Route path="/Statistics" element={<Statistics />} />
             <Route path="/Famers" element={<Famers />} />
+            <Route path="/Users" element={<User />} />
           </Routes>
         </div>
       </div>

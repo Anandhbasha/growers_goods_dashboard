@@ -12,7 +12,7 @@ const Sidebar = () => {
         <p>Growers Goods</p>
         <ul className="nav_links">
           <li className="nav_link">
-            <Link to="/">
+            <Link to="/" className="link">
               <div className="sidebar_link">
                 <i class="fa-solid fa-border-all"></i>
                 <span>Dashboard</span>
@@ -35,7 +35,7 @@ const Sidebar = () => {
           <li className="category">
             <ul className="dropdown">
               <li className="cat">
-                <Link to="/Veggies">
+                <Link to="/Veggies" className="link">
                   <div className="sidebar_link">
                     <i class="fa-solid"></i>
                     <span>Veggies</span>
@@ -43,7 +43,7 @@ const Sidebar = () => {
                 </Link>
               </li>
               <li className="cat">
-                <Link to="/Seeds">
+                <Link to="/Seeds" className="link">
                   <div className="sidebar_link">
                     <i class="fa-solid"></i>
                     <span>Seeds</span>
@@ -51,7 +51,7 @@ const Sidebar = () => {
                 </Link>
               </li>
               <li className="cat">
-                <Link to="/Fertilizer">
+                <Link to="/Fertilizer" className="link">
                   <div className="sidebar_link">
                     <i class="fa-solid"></i>
                     <span>Fertilizer</span>
@@ -61,7 +61,7 @@ const Sidebar = () => {
             </ul>
           </li>
           <li className="nav_link">
-            <Link to="/Statistics">
+            <Link to="/Statistics" className="link">
               <div className="sidebar_link">
                 <i class="fa-solid fa-chart-line"></i>
                 <span>Statistics</span>
@@ -69,10 +69,18 @@ const Sidebar = () => {
             </Link>
           </li>
           <li className="nav_link">
-            <Link to="/Famers">
+            <Link to="/Famers" className="link">
               <div className="sidebar_link">
                 <i class="fa-solid fa-user-tie"></i>
                 <span>Farmers</span>
+              </div>
+            </Link>
+          </li>
+          <li className="nav_link">
+            <Link to="/Users" className="link">
+              <div className="sidebar_link">
+                <i class="fa-solid fa-user-tie"></i>
+                <span>Users</span>
               </div>
             </Link>
           </li>

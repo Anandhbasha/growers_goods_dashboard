@@ -4,7 +4,7 @@ import "./Veggies.css";
 const Veggies = () => {
   return (
     <div className="veggies">
-      <div className="table_Heading">Veggis In Stock</div>
+      
       <table class="table" id="products">
         <thead>
           <tr>
