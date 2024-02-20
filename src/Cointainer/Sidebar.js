@@ -1,9 +1,6 @@
 import React from "react";
 import "./Sidebar.css";
 import { Link } from "react-router-dom";
-import Fertilizer from "../Pages/Fertilizer/Fertilizer";
-import Seeds from "../Pages/Seeds/Seeds";
-import Veggies from "../Pages/Veggies/Veggies";
 
 const Sidebar = () => {
   return (

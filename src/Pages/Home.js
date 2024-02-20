@@ -2,8 +2,7 @@ import React from "react";
 import "./Home.css";
 import ReportCrads from "../Cointainer/ReportCards/ReportCrads";
 import Areachart from "../Components/Charts/Areachart/Areachart";
-import Veggies from "./Veggies/Veggies";
-import Top_products from "../Components/Charts/Areachart/Top_Products/Top_products";
+import Table from "../Components/Table/Table";
 
 const Home = () => {
   return (
@@ -15,7 +14,7 @@ const Home = () => {
         <Areachart />
       </div>
       <div className="section_bottom">
-        <Veggies />
+        <Table />
       </div>
     </div>
   );
