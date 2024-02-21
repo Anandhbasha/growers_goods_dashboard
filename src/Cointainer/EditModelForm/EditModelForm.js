@@ -7,7 +7,12 @@ const EditModelForm = ({ handleClose }) => {
       <div className="modelPopupBG"></div>
       <div className="foom">
         <div className="modelFormCard">
-          <button onClick={handleClose}>x</button>
+          <div className="modalpop_top">
+            <div className="modalpop_top_heading">Edit Products</div>
+            <button onClick={handleClose} className="close_btn">
+              x
+            </button>
+          </div>
         </div>
       </div>
     </div>

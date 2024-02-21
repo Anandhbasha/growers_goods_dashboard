@@ -34,3 +34,18 @@
   justify-content: center;
   align-items: center;
 }
+.modalpop_top{
+    
+    background-color: #00ffff8c;
+    display: flex;
+    padding: 10px 10px;
+    gap: 228px;
+    border-radius: 22px 22px 0px 0px;
+}
+.close_btn{
+    color: white;
+    background-color: rgba(255, 0, 0, 0.541);
+}
+.modalpop_top_heading{
+    color: black;
+}
