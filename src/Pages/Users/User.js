@@ -1,5 +1,5 @@
 import React from "react";
-import Table from "../../Components/Table/Table";
+import Table from "../../Components/Table/Individual/Table";
 
 const User = () => {
   return (

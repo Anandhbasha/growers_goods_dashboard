@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReactApexChart from "react-apexcharts";
 import "./Areachart.css";
-import Top_products from "./Top_Products/Top_products";
+import Top_products from "../../Top_Products/Top_products";
 
 const Areachart = () => {
   const [areachart, setAreachart] = useState({

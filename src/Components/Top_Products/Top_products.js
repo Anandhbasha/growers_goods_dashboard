@@ -19,7 +19,6 @@ const Top_products = () => {
       color: "pink",
     },
   ]);
-  console.log(products);
   return (
     <div className="Top_products">
       Top Products
