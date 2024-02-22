@@ -27,3 +27,9 @@ th{
     color: #fb0000c2;
     border-radius: 0px 10px 0px 10px;
 }
+.accept> input{
+    width: 50px;
+    background-color:#262c36 ;
+    outline: none;
+    border: none;
+}

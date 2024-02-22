@@ -15,7 +15,6 @@ import User from "./Pages/Users/User";
 const App = () => {
   return (
     <BrowserRouter>
-
       <div className="container">
         <div className="sidebar">
           <Sidebar />
@@ -29,7 +28,6 @@ const App = () => {
             <Route path="/Veggies" element={<Veggies />} />
             <Route path="/Seeds" element={<Seeds />} />
             <Route path="/Fertilizer" element={<Fertilizer />} />
-            <Route path="/Statistics" element={<Statistics />} />
             <Route path="/Famers" element={<Famers />} />
             <Route path="/Users" element={<User />} />
           </Routes>

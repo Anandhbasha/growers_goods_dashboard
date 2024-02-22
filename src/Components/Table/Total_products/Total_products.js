@@ -11,6 +11,8 @@ const Total_products = () => {
       customer_location: "Tiruppur",
       customer_Contact_number: "9878945632",
       Number_of_kg_received: 45,
+      accepted: "",
+      Rejected: "",
     },
     {
       id: 2,
@@ -20,6 +22,8 @@ const Total_products = () => {
       customer_location: "Salem",
       customer_Contact_number: "9877231444",
       Number_of_kg_received: 25,
+      accepted: "",
+      Rejected: "",
     },
     {
       id: 3,
@@ -29,6 +33,8 @@ const Total_products = () => {
       customer_location: "Coimbatore",
       customer_Contact_number: "9715467235",
       Number_of_kg_received: 105,
+      accepted: "",
+      Rejected: "",
     },
     {
       id: 4,
@@ -38,6 +44,8 @@ const Total_products = () => {
       customer_location: "Dharapuram",
       customer_Contact_number: "9878945632",
       Number_of_kg_received: 32,
+      accepted: "",
+      Rejected: "",
     },
     {
       id: 5,
@@ -47,6 +55,8 @@ const Total_products = () => {
       customer_location: "Bhavani",
       customer_Contact_number: "9878945632",
       Number_of_kg_received: 10,
+      accepted: "",
+      Rejected: "",
     },
   ]);
   return (
@@ -54,13 +64,14 @@ const Total_products = () => {
       <table class="table" id="products">
         <thead>
           <tr>
-            <th scope="col">ID</th>
+            <th scope="col">S.NO</th>
             <th scope="col">Farmer_Name</th>
             <th scope="col">Category_name-Name</th>
             <th scope="col">Product_Name</th>
             <th scope="col">Customer_location</th>
             <th scope="col">Contact_number</th>
-            <th scope="col">No.Of.KG</th>
+            <th scope="col">Received</th>
+            <th scope="col">Approved</th>
             <th scope="col">Accept</th>
             <th scope="col">Delete</th>
           </tr>
@@ -76,6 +87,9 @@ const Total_products = () => {
                 <td>{item.customer_location}</td>
                 <td>{item.customer_Contact_number}</td>
                 <td>{item.Number_of_kg_received}</td>
+                <td className="accept">
+                  <input type="number" />
+                </td>
                 <td>
                   <button class="btn_approve">Approve</button>
                 </td>

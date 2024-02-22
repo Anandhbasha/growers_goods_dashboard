@@ -10,7 +10,6 @@ const Table = ({ data }) => {
       ? (document.getElementById("body").style.overflowY = "hidden")
       : (document.getElementById("body").style.overflowY = "scroll");
   }, [modelShow]);
-  
 
   var maxValue = 0;
   var maxValueIndex = 0;
@@ -24,13 +23,12 @@ const Table = ({ data }) => {
   const table_head = data?.find((_, index) => index === maxValueIndex);
 
   const handleClick = (data) => {
-    console.log(data);
     setModelShow(true);
   };
 
   const handleClose = () => {
-    setModelShow(false)
-  }
+    setModelShow(false);
+  };
 
   return (
     <div>
@@ -54,6 +52,7 @@ const Table = ({ data }) => {
 
                 <td>
                   <button
+                    className="products_edit_btn"
                     onClick={() => {
                       handleClick(rowdata.SNo);
                     }}
@@ -63,6 +62,7 @@ const Table = ({ data }) => {
                 </td>
                 <td>
                   <button
+                    className="products_delete_btn"
                     onClick={() => {
                       handleClick(rowdata.SNo);
                     }}

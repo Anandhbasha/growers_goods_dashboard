@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Sidebar.css";
+import image3 from "../Assets/Image/NEWS2FARMER.jpg";
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
+  const [hidecatgeory, setHidecategory] = useState(false);
+  const handleCategory = () => {
+    setHidecategory((prevState) => !prevState);
+  };
   return (
     <div className="sidebar_nav">
       <div className="heading">
-        <p>Growers Goods</p>
+        <div className="left_head">
+          <div className="nav_image">
+            <img src={image3} />
+          </div>
+          <p>Growers Goods</p>
+        </div>
         <ul className="nav_links">
           <li className="nav_link">
             <Link to="/" className="link">
@@ -16,20 +26,24 @@ const Sidebar = () => {
               </div>
             </Link>
           </li>
-          <li className="nav_link ">
-            {/* <Link to="/Category"> */}
+          <li className="nav_link " onClick={handleCategory}>
             <div className="sidebar_link">
               <i class="fa-solid fa-list"></i>
               <span className="nav_link_cat">
                 <span>Category</span>
-                <i class="fa-solid fa-caret-down"></i>
+
+                <i
+                  class="fa-solid fa-caret-down"
+                  style={{ transform: `rotate(${hidecatgeory ? 180 : 0}deg)` }}
+                ></i>
               </span>
             </div>
-            {/*  */}
-
-            {/* </Link> */}
           </li>
-          <li className="category">
+
+          <li
+            className="category"
+            style={{ display: `${hidecatgeory ? "flex" : "none"}` }}
+          >
             <ul className="dropdown">
               <li className="cat">
                 <Link to="/Veggies" className="link">
@@ -57,19 +71,12 @@ const Sidebar = () => {
               </li>
             </ul>
           </li>
-          <li className="nav_link">
-            <Link to="/Statistics" className="link">
-              <div className="sidebar_link">
-                <i class="fa-solid fa-chart-line"></i>
-                <span>Statistics</span>
-              </div>
-            </Link>
-          </li>
+
           <li className="nav_link">
             <Link to="/Famers" className="link">
               <div className="sidebar_link">
-                <i class="fa-solid fa-user-tie"></i>
-                <span>Farmers</span>
+                <i class="fa-brands fa-solid fa-product-hunt"></i>
+                <span>Total Products</span>
               </div>
             </Link>
           </li>
@@ -82,10 +89,6 @@ const Sidebar = () => {
             </Link>
           </li>
         </ul>
-      </div>
-      <div className="bottom">
-        <i class="fa-solid fa-right-from-bracket"></i>
-        <span>Logout</span>
       </div>
     </div>
   );

@@ -9,7 +9,6 @@ const Topbar = () => {
       </div>
       <div className="notification">
         <i class="fa-regular fa-bell"></i>
-        <div className="profile"></div>
       </div>
     </div>
   );
