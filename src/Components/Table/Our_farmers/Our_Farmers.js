@@ -34,7 +34,7 @@ const Our_Farmers = () => {
         </thead>
         <tbody>
           {farmer_deials.map((item) => {
-            console.log(item);
+            console.log("aadd", item);
             return (
               <tr>
                 <td>{item.id}</td>
