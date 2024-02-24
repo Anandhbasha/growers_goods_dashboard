@@ -1,46 +1,36 @@
-import React, { useState } from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 const Our_Farmers = () => {
-  const [farmer_deials, setFarmer_deials] = useState([
-    {
-      id: 1,
-      farmer_name: "Anandh",
-      farmer_contact: "974575856",
-      farmer_address: "Salem",
-    },
-    {
-      id: 2,
-      farmer_name: "Anandh",
-      farmer_contact: "974575856",
-      farmer_address: "Salem",
-    },
-    {
-      id: 3,
-      farmer_name: "Anandh",
-      farmer_contact: "974575856",
-      farmer_address: "Salem",
-    },
-  ]);
+  const [usercount, setUsercount] = useState([{}]);
+  useEffect(() => {
+    const get_usercount = async () => {
+      const {
+        data: { result },
+      } = await axios.get(`http://localhost:8080/users/user_getregister`);
+      setUsercount(result);
+      console.log(result);
+    };
+    get_usercount();
+  }, []);
   return (
     <div className="Total_products_table">
       <table class="table" id="products">
         <thead>
           <tr>
             <th scope="col">S.NO</th>
-            <th scope="col">Farmer_Name</th>
-            <th scope="col">Farmer_Contact</th>
-            <th scope="col">Farmer_Address</th>
+            <th scope="col">User_Name</th>
+            <th scope="col">User_Email</th>
           </tr>
         </thead>
         <tbody>
-          {farmer_deials.map((item) => {
+          {usercount.map((item, idx) => {
             console.log("aadd", item);
             return (
               <tr>
-                <td>{item.id}</td>
-                <td>{item.farmer_name}</td>
-                <td>{item.farmer_contact}</td>
-                <td>{item.farmer_address}</td>
+                <td>{idx + 1}</td>
+                <td>{item.user_name}</td>
+                <td>{item.user_email}</td>
               </tr>
             );
           })}

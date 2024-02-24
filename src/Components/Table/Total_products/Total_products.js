@@ -11,7 +11,6 @@ const Total_products = () => {
       const {
         data: { message },
       } = await axios.get(`http://localhost:8080/farmer/productList`);
-      console.log("anandh", message);
       setTotal_products(message);
     };
     get_total_products();

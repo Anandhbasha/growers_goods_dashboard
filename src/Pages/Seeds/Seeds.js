@@ -1,48 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Table from "../../Components/Table/Individual/Table";
+import axios from "axios";
 
 const Seeds = () => {
-  const [seedscount, useSeedscount] = useState([
-    {
-      SNo: 1,
-      image: "",
-      Seeds_name: "Tomoto_seeds",
-      Avalible_Kg: 140,
-      our_price: 35,
-      market_price: 42,
-      ratings: 4,
-    },
-    {
-      SNo: 2,
-      image: "",
-      Seeds_name: "Pumbkin_seeds",
-      Avalible_Kg: 140,
-      our_price: 35,
-      market_price: 42,
-      ratings: 4,
-      test: "",
-      worst: "Gagg",
-    },
-    {
-      SNo: 3,
-      image: "",
-      Seeds_name: "Onion_seeds",
-      Avalible_Kg: 140,
-      our_price: 35,
-      market_price: 42,
-      ratings: 4,
-      test: "",
-    },
-    {
-      SNo: 4,
-      image: "",
-      Seeds_name: "BottleGuard_seeds",
-      Avalible_Kg: 70,
-      our_price: 80,
-      market_price: 102,
-      ratings: 5,
-    },
-  ]);
+  const [seedscount, setSeedscount] = useState([{}]);
+  useEffect(() => {
+    const get_allseeds = async () => {
+      const {
+        data: { message },
+      } = await axios.get(`http://localhost:8080/category/seeds`);
+      setSeedscount(message);
+      console.log(message);
+    };
+    get_allseeds();
+  }, []);
+
   return (
     <div className="veggies">
       <div className="table_Heading">Seeds In Stock</div>
