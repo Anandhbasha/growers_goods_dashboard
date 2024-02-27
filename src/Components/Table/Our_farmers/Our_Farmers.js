@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { backendapi } from "../../../App";
 
 const Our_Farmers = () => {
   const [usercount, setUsercount] = useState([{}]);
@@ -7,7 +8,7 @@ const Our_Farmers = () => {
     const get_usercount = async () => {
       const {
         data: { result },
-      } = await axios.get(`http://localhost:8080/users/user_getregister`);
+      } = await axios.get(`${backendapi}/users/user_getregister`);
       setUsercount(result);
       console.log(result);
     };

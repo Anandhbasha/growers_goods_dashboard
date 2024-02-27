@@ -11,7 +11,7 @@ const ReportCrads = () => {
     {
       cardTitle: "Total Products",
       cardValue: 5100,
-      cardview: "vegetables",
+      cardview: "Famers",
       Report: 10,
       image: image1,
       // color: "#2AA31F",
@@ -19,7 +19,7 @@ const ReportCrads = () => {
     {
       cardTitle: "Total Seeds",
       cardValue: 2100,
-      cardview: "View All",
+      cardview: "Veggies",
       Report: 10,
       // color: "red",
       image: image2,
@@ -27,7 +27,7 @@ const ReportCrads = () => {
     {
       cardTitle: "Total Fertilizer",
       cardValue: 1200,
-      cardview: "View All",
+      cardview: "Seeds",
       Report: 10,
       // color: "yellow",
       image: image3,
@@ -35,7 +35,7 @@ const ReportCrads = () => {
     {
       cardTitle: "Total Vegtables",
       cardValue: 1100,
-      cardview: "Veggies",
+      cardview: "Fertilizer",
       Report: 10,
       // color: "white",
       image: image4,

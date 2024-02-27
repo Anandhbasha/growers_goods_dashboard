@@ -12,6 +12,8 @@ import Veggies from "./Pages/Veggies/Veggies";
 import Seeds from "./Pages/Seeds/Seeds";
 import User from "./Pages/Users/User";
 
+export const backendapi = `http://10.10.10.222:8080`
+
 const App = () => {
   return (
     <BrowserRouter>

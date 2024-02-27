@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import "./Total_products.css";
 import axios from "axios";
+import { backendapi } from "../../../App";
 
 const Total_products = () => {
   const [total_products, setTotal_products] = useState([{}]);
-  console.log(total_products);
 
   useEffect(() => {
     const get_total_products = async () => {
       const {
         data: { message },
-      } = await axios.get(`http://localhost:8080/farmer/productList`);
+      } = await axios.get(`${backendapi}/farmer/productList`);
       setTotal_products(message);
     };
     get_total_products();

@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./Table.css";
 import EditModelForm from "../../../Cointainer/EditModelForm/EditModelForm";
 
-const Table = ({ data }) => {
+const Table = ({ data, get_alldata }) => {
   const [modelShow, setModelShow] = useState(false);
+  const [modelData, setModelData] = useState();
 
   useEffect(() => {
     modelShow
@@ -23,11 +24,13 @@ const Table = ({ data }) => {
   const table_head = data?.find((_, index) => index === maxValueIndex);
 
   const handleClick = (data) => {
+    setModelData(data);
     setModelShow(true);
   };
 
   const handleClose = () => {
     setModelShow(false);
+    get_alldata();
   };
 
   return (
@@ -54,7 +57,7 @@ const Table = ({ data }) => {
                   <button
                     className="products_edit_btn"
                     onClick={() => {
-                      handleClick(rowdata.SNo);
+                      handleClick(rowdata);
                     }}
                   >
                     Edit
@@ -63,9 +66,9 @@ const Table = ({ data }) => {
                 <td>
                   <button
                     className="products_delete_btn"
-                    onClick={() => {
-                      handleClick(rowdata.SNo);
-                    }}
+                    // onClick={() => {
+                    //   handleClick(rowdata.SNo);
+                    // }}
                   >
                     Delete
                   </button>
@@ -76,7 +79,9 @@ const Table = ({ data }) => {
         </tbody>
       </table>
 
-      {modelShow && <EditModelForm handleClose={handleClose} />}
+      {modelShow && (
+        <EditModelForm handleClose={handleClose} modelData={modelData} />
+      )}
     </div>
   );
 };
