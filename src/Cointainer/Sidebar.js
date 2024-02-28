@@ -88,6 +88,14 @@ const Sidebar = () => {
               </div>
             </Link>
           </li>
+          <li className="nav_link">
+            <Link to="/Orders" className="link">
+              <div className="sidebar_link">
+                <i class="fa-solid fa-store"></i>
+                <span>Orders</span>
+              </div>
+            </Link>
+          </li>
         </ul>
       </div>
     </div>

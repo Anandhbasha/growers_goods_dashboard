@@ -11,8 +11,9 @@ import Fertilizer from "./Pages/Fertilizer/Fertilizer";
 import Veggies from "./Pages/Veggies/Veggies";
 import Seeds from "./Pages/Seeds/Seeds";
 import User from "./Pages/Users/User";
+import Orders from "./Pages/Orders/Orders";
 
-export const backendapi = `http://10.10.10.222:8080`
+export const backendapi = `http://10.10.10.222:8080`;
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
             <Route path="/Fertilizer" element={<Fertilizer />} />
             <Route path="/Famers" element={<Famers />} />
             <Route path="/Users" element={<User />} />
+            <Route path="/Orders" element={<Orders />} />
           </Routes>
         </div>
       </div>
