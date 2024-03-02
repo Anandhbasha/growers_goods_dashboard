@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Orders_table = ({ data }) => {
-  console.log(data);
   return (
     <div className="Total_products_table">
       <table class="table" id="products">
@@ -13,6 +12,7 @@ const Orders_table = ({ data }) => {
             <th scope="col">Mobile</th>
             <th scope="col">Product</th>
             <th scope="col">Kg</th>
+            <th scope="col">order_at</th>
             <th scope="col">Address</th>
             <th scope="col">City</th>
             <th scope="col">Email</th>
@@ -29,9 +29,10 @@ const Orders_table = ({ data }) => {
                 <td>{idx + 1}</td>
                 <td>{item.first_name}</td>
                 <td>{item.last_name}</td>
-                <td>{item.mobile}</td>
-                <td>{item.product}</td>
+                <td>{item.mobile_number}</td>
+                <td>{item.product_name}</td>
                 <td>{item.kg}</td>
+                <td>{item.order_at}</td>
                 <td>{item.address}</td>
                 <td>{item.city}</td>
                 <td>{item.email}</td>
