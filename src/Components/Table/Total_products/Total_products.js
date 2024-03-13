@@ -12,6 +12,7 @@ const Total_products = () => {
         data: { message },
       } = await axios.get(`${backendapi}/farmer/productList`);
       setTotal_products(message);
+      console.log("ajha", message);
     };
     get_total_products();
   }, []);
@@ -20,11 +21,10 @@ const Total_products = () => {
     <div className="Total_products_table">
       <table class="table" id="products">
         <thead>
-          {total_products.slice(0, 1).map((datas) => {
+          {total_products.slice(0, 1).map((datas, idx) => {
             return (
               <tr>
                 {Object.keys(datas).map((heading) => {
-                  console.log("1", heading);
                   return <th>{heading}</th>;
                 })}
                 ;

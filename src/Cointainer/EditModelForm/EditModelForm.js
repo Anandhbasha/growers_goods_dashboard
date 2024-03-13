@@ -67,7 +67,7 @@ const EditModelForm = ({ handleClose, modelData }) => {
         `${backendapi}/category/${product_cat}/${modelData.id}`,
         {
           product_name,
-          in_stock: modelData.in_stock,
+          in_stock,
           image: imageUpload,
           our_price,
           market_price,
